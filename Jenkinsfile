@@ -1,7 +1,6 @@
 node('nodejs') {
 stage('Checkout') {
-git branch: 'main',
-ur: 'https://github.com/ipsdata007/do400-pipelines-control.git'
+git branch: 'main', url: 'https://github.com/ipsdata007/do400-pipelines-control.git'
 }
 stage('Backend Tests') {
 sh 'node ./backend/test.js'
